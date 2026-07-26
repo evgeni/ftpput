@@ -2,13 +2,18 @@ package main
 
 import (
 	"log"
+	"os"
 
 	"github.com/evgeni/ftpput/driver/fileput"
 	"goftp.io/server/v2"
 )
 
 func main() {
-	driver, err := fileput.NewDriver("./")
+	dir := os.Getenv("FTPPUT_DIR")
+	if dir == "" {
+		dir = "./"
+	}
+	driver, err := fileput.NewDriver(dir)
 	if err != nil {
 		log.Fatal(err)
 	}
