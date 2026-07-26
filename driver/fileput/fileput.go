@@ -12,7 +12,7 @@ import (
 
 type Driver struct {
 	RootPath string
-	fd server.Driver
+	fd       server.Driver
 }
 
 func NewDriver(rootPath string) (server.Driver, error) {

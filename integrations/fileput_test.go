@@ -80,7 +80,6 @@ func TestFilePutDriver(t *testing.T) {
 			assert.Error(t, err)
 			assert.Nil(t, r)
 
-
 			err = f.Rename("/server_test.go", "/test.go")
 			assert.Error(t, err)
 
