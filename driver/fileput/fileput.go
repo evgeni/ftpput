@@ -31,8 +31,9 @@ func NewDriver(rootPath string) (server.Driver, error) {
 }
 
 func (driver *Driver) Stat(ctx *server.Context, path string) (os.FileInfo, error) {
-	return nil, errors.New("Nope")
+	return driver.fd.Stat(ctx, path)
 }
+
 func (driver *Driver) ListDir(ctx *server.Context, path string, callback func(os.FileInfo) error) error {
 	return errors.New("Nope")
 }

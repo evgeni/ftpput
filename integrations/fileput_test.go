@@ -73,8 +73,8 @@ func TestFilePutDriver(t *testing.T) {
 			assert.EqualValues(t, "/", curDir)
 
 			size, err := f.FileSize("/server_test.go")
-			assert.Error(t, err)
-			assert.EqualValues(t, size, 0)
+			assert.NoError(t, err)
+			assert.EqualValues(t, size, 4)
 
 			r, err := f.RetrFrom("/server_test.go", 2)
 			assert.Error(t, err)
