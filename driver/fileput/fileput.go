@@ -54,10 +54,5 @@ func (driver *Driver) GetFile(ctx *server.Context, path string, offset int64) (i
 }
 
 func (driver *Driver) PutFile(ctx *server.Context, destPath string, data io.Reader, offset int64) (int64, error) {
-	bytes, err := driver.fd.PutFile(ctx, destPath, data, offset)
-	if err != nil {
-		return 0, err
-	}
-
-	return bytes, nil
+	return driver.fd.PutFile(ctx, destPath, data, offset)
 }
