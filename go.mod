@@ -3,7 +3,7 @@ module github.com/evgeni/ftpput
 go 1.23.0
 
 require (
-	github.com/jlaffaye/ftp v0.2.2
+	github.com/jlaffaye/ftp v0.2.4
 	github.com/stretchr/testify v1.12.1
 	goftp.io/server/v2 v2.0.3
 )
